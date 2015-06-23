@@ -192,7 +192,7 @@ def play():
             print 'Sorry, you need to enter a number. Please try again.'
     destList =[]
     while len(destList) < len(divisions):
-        newDest = raw_input('Where would you like to go? \n Hint: The options are New Orleans, Austin, Ocean City, Washington Crossing,San Franciso, Staycation!, and Athens. \n Hint: You can enter a destination more than once.\n')
+        newDest = raw_input('Where would you like to go? \nThe options are: ' +str(costDB.keys()).strip('[').strip(']').replace("'","") +'\n Hint: You can enter a destination more than once.\n')
         if newDest not in costDB.keys():
             print "Sorry, I don't have travel data for that location! Please try again."
         else:
